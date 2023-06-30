@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "styles/home.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <!-- Main -->
+    <div class="dropdown">
+        <div class="select">
+            <span class="selected">منوی روز</span>
+            <div class="caret"></div>
+        </div>
+        <ul class="menu">
+            <a href="{% url "breakfast" %}"><li>صبحانه</li></a>
+            <a href="{% url "lunch" %}"><li>ناهار</li></a>
+            <a href="{% url "evening" %}"><li>عصرانه</li></a>
+            <a href="{% url "dinner" %}"><li>شام</li></a>
+        </ul>
+    </div>
+
+
+    <!-- About And Contact -->
+    <div class="about-us">
+        <a href="{% url "about" %}"><h1>درباره ی ما</h1></a>
+    </div>
+
+    <div class="about-us">
+        <a href="{% url "contact" %}"><h1>تماس با ما</h1></a>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <a href=""><i class="fab fa-instagram"></i></a>
+    </div>
+
+{% endblock %}

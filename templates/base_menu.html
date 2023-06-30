@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "styles/menu.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <!-- Menu -->
+    <div class="breakfast-menu">
+        {% if main %}
+            <!-- Bre menu -->
+            <div class="bre-text">
+                {% block header %}
+                {% endblock %}
+            </div>
+            {% for item in main %}
+                <div class="bre-menu">
+                    <p><span>{{ item.price }}</span> <br> هزار تومان</p>
+                    <h2>{{ item.name }}</h2>
+                </div>
+                <div class="desc">
+                    <p>{{ item.description }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% if sides %}
+            <!-- Sides -->
+            <div class="bre-text">
+                <h1 style="font-weight: 500;"><span>:</span>سالاد و پیش غذا </h1>
+            </div>
+            {% for item in sides %}
+                <div class="bre-menu">
+                    <p><span>{{ item.price }}</span> <br> هزار تومان</p>
+                    <h2>{{ item.name }}</h2>
+                </div>
+                <div class="desc">
+                    <p>{{ item.description }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% if drinks %}
+            <!-- Drinks -->
+            <div class="bre-drink">
+                <h1><span>:</span>نوشیدنی ها</h1>
+            </div>
+            {% for item in drinks %}
+                <div class="bre-menu">
+                    <p><span>{{ item.price }}</span> <br> هزار تومان</p>
+                    <h2 style="font-weight: 500;">{{ item.name }}</h2>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <!-- footer -->
+    <div class="footer-home">
+        <a href="{% url 'index' %}">
+            <button>بازگشت به صفحه ی اصلی</button>
+        </a>
+    </div>
+
+{% endblock %}

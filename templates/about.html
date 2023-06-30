@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static "styles/home.css" %}">
+{% endblock %}
+
+
+{% block content %}
+    <!-- Main -->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="{% static "images/about.jpg" %}" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="{% static "images/kris-atomic-3b2tADGAWnU-unsplash.jpg" %}" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="{% static "images/patrick-tomasso-GXXYkSwndP4-unsplash.jpg" %}" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- Text -->
+    <div class="text-landing">
+        <p>این کتاب، یک راهنمای روابط محسوب می‌شود و برای زنانی نوشته شده است که بیش از حد مطیع هستند. عنوان و محتوای
+            کتاب نشان می‌دهد که در ذهن بیشتر خانم‌ها چه می‌گذرد و چرا به زبان آن‌ها جاری نمی‌شود. همه‌ی خانم‌ها از اینکه
+            جلوی مردشان محتاج محبت به نظر برسند خجالت‌زده می‌شوند، تجربه‌ی تعقیب‌شدن توسط مردان هوس‌باز را داشته‌اند و
+            می‌فهمند چه حسی دارد که از آن‌ها سوءاستفاده بشود. این مشکلات برای همه‌ی زنان وجود دارد، چه مجرد و چه متأهل!
+            پس چرا مردان زنان زیرک را دوست دارند؟ (Why men love bitches) یک تفاوت مهم میان معنای معمول این کلمه با
+            معنایی که در این کتاب مورد نظر است وجود دارد.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-arrow">
+        <a href="{% url "contact" %}" class="rotate"><span>تماس با ما </span></a>
+        <a href="{% url "index" %}" class="orginal"><p>صفحه ی اصلی </p></a>
+    </div>
+{% endblock %}
+
+{% block extrajs %}
+    <script src="{% static "js/slider.js" %}"></script>
+{% endblock %}

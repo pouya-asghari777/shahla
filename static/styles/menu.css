@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-color: #C4D7B2;
+}
+
+.landing {
+    display: flex;
+    width: 100%;
+    min-height: 10vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.breakfast-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.bre-text {
+    width: 100%;
+    display: flex;
+    font-family: Peykan;
+    font-size: 15px;
+    justify-content: right;
+    text-align: right;
+    align-items: right;
+}
+
+.bre-text h1 {
+    font-size: 35px;
+    padding: 0 30px;
+}
+
+.bre-drink {
+    width: 100%;
+    display: flex;
+    font-family: Peykan;
+    font-size: 15px;
+    justify-content: right;
+    text-align: right;
+    align-items: right;
+    margin: 20px 0;
+}
+
+.bre-drink h1 {
+    font-size: 35px;
+    padding: 0 30px;
+}
+
+.bre-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px 20px;
+    font-family: Peykan;
+}
+
+.bre-menu h2 {
+    color: #393646;
+    border-bottom: 1px solid #393646;
+    padding: 0 20px;
+}
+
+.bre-menu span {
+    font-weight: bold;
+    position: absolute;
+    left: 3%;
+    font-family: sans-serif;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    text-align: right;
+}
+
+.desc p {
+    font-size: 25px;
+    font-family: Peykan;
+    padding: 0 40px;
+}
+
+/* Footer */
+
+.footer-home  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer-home button {
+     font-size: 20px;
+     background-color: #73BBC9;
+     padding: 20px 20px;
+     border-radius: 50px;
+     font-family: Peykan;
+     cursor: pointer;
+     color: #111;
+     outline: none;
+     border: none;
+}
+
+
+/* Font Face */
+
+@font-face {
+    font-family: Peykan;
+    src: url(../font/amin/amin.ttf);
+  }
+
+
+@media (max-width: 930px) {
+    .landing {
+        width: 100%;
+        height: 50%;
+    }
+
+    .logo img {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .landing {
+        width: 100%;
+        height: 40vh;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .landing {
+        width: 100%;
+        height: 50%;
+        opacity: 0.9;
+    }
+
+    .logo img {
+        width: 90%;
+        height: 50%;
+        margin: 0;
+    }
+
+    .breakfast-menu {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    .bre-text h1 {
+        font-size: 25px;
+    }
+
+    .bre-menu {
+        padding: 0 5px;
+    }
+
+    .bre-menu h2 {
+        font-size: 15px;
+    }
+
+    .bre-menu span {
+        font-weight: bold;
+        position: absolute;
+        left: 5.5%;
+    }
+
+    .desc p {
+        font-size: 15px;
+        padding: 0 20px;
+    }
+
+    .bre-drink h1 {
+        font-size: 25px;
+    }
+}
