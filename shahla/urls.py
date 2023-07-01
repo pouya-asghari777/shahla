@@ -30,6 +30,6 @@ urlpatterns = [
                   path('about/', AboutView.as_view(), name='about'),
                   path('contact/', ContactView.as_view(), name='contact'),
                   path('admin/', admin.site.urls),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + staticfiles_urlpatterns()
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 admin.site.site_header = 'Shahla Catering'
