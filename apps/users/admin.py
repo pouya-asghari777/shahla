@@ -9,7 +9,7 @@ User = get_user_model()
 
 
 class UserAdmin(auth_admin.UserAdmin):
-    list_display = ['name', 'email']
+    list_display = ['email']
     form = UserChangeForm
     add_form = UserCreationForm
 
