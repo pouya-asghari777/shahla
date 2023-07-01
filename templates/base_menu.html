@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load farsi %}
 
 {% block css %}
     <!-- CSS -->
@@ -10,15 +11,14 @@
 {% block content %}
     <!-- Menu -->
     <div class="breakfast-menu">
-        {% if main %}
-            <!-- Bre menu -->
+        {% if sides %}
+            <!-- Sides -->
             <div class="bre-text">
-                {% block header %}
-                {% endblock %}
+                <h1 style="font-weight: 500;"><span>:</span>سالاد و پیش غذا </h1>
             </div>
-            {% for item in main %}
+            {% for item in sides %}
                 <div class="bre-menu">
-                    <p><span>{{ item.price }}</span> <br> هزار تومان</p>
+                    <p><span>{{ item.price|persian_int }}</span> <br> هزار تومان</p>
                     <h2>{{ item.name }}</h2>
                 </div>
                 <div class="desc">
@@ -27,14 +27,15 @@
             {% endfor %}
         {% endif %}
 
-        {% if sides %}
-            <!-- Sides -->
+        {% if main %}
+            <!-- Bre menu -->
             <div class="bre-text">
-                <h1 style="font-weight: 500;"><span>:</span>سالاد و پیش غذا </h1>
+                {% block header %}
+                {% endblock %}
             </div>
-            {% for item in sides %}
+            {% for item in main %}
                 <div class="bre-menu">
-                    <p><span>{{ item.price }}</span> <br> هزار تومان</p>
+                    <p><span>{{ item.price|persian_int }}</span> <br> هزار تومان</p>
                     <h2>{{ item.name }}</h2>
                 </div>
                 <div class="desc">
@@ -50,7 +51,7 @@
             </div>
             {% for item in drinks %}
                 <div class="bre-menu">
-                    <p><span>{{ item.price }}</span> <br> هزار تومان</p>
+                    <p><span>{{ item.price|persian_int }}</span> <br> هزار تومان</p>
                     <h2 style="font-weight: 500;">{{ item.name }}</h2>
                 </div>
             {% endfor %}
