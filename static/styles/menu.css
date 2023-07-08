@@ -112,6 +112,7 @@ body {
     font-size: 25px;
     font-family: Peykan;
     padding: 0 40px;
+    color: #884A39;
 }
 
 /* Footer */
@@ -208,7 +209,7 @@ body {
 
     .desc p {
         font-size: 15px;
-        padding: 0 20px;
+        padding: 5px 20px;
     }
 
     .bre-drink h1 {
